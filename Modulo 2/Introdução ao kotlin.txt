@@ -1,0 +1,144 @@
+//////Principais conceitos sobre a linguagem Kotlin e Desenvolvimento Android/////
+1-PRIMEIRA AULA
+DESENVOLVIMENTO ANDROID
+*hibrido=unica linguagem gera aplicação generica e ira se aplicar a android e ios
+*nativo=unico codigo gera uma aplicação especifica
+*importante ** documentação
+
+KOTLIN
+*linguagem multiplataforma,orientada a objetos funcional
+*gratuito e codigo aberto
+*nao utiliza ponto e virgula
+*nao possui operador ternario tradicional
+*type safe e null safe
+*inferencia de tipo
+*frontend web com kotlin/js
+*frameworks Kvision e Fritz2
+*backend com target node.js do kotlin/js
+*mobile multiplataforma(kmm)
+*interoperabilidade com o java
+*smart casts e null safety
+*android é kotlin first
+
+2- SEGUNDA AULA
+
+TIPO DE DADOS
+*int
+*long
+*floot
+*double
+*array
+*boolean
+*char
+*byte
+*short
+*null
+*TO(CONVERTER DADOS) = TOINT()
+
+DECLARAÇÃO DE VARIAVEL
+*var (mutavel)
+*val(tera somente o valor atribuido, imutavel)
+*const val (valor atribuido durante a compilação, imutavel)
+*é importante acrescentar o tipo de referencia em suas variaveis 
+exemplo: currentyear=2021.tostring()+"ano"
+printin(currentyear)
+*nullability (?)
+
+OPERADORES ARITIMETICOS E LOGICOS
+*soma: a+b/a.plus(b)/a+=b
+*subtração: a-b/a.minus(b)/a-=b
+*multiplicaçao: a*b/a.times(b)/a*=b
+*divisao: a/b /a.div(b)/ a/=b
+*resto: a%b/a.mod(b)/a%=b
+*operações rapidas: printin(var.equals(var)) para checar igualdade ou
+printin(!var.equals(var)) para checar diferença
+*(&&) e
+* (||) ou
+* contem (in)
+* nao contem (!in)
+*range/faixa de valores (int..int)
+exemplo: print (12 in 0..20)
+
+MANIPULAÇÃO DE STRING E CONCATENAÇÃO
+* string como array
+*first()
+*last()
+*string.length
+*string[index]
+*plus/+: concatenação
+*"${var} nome" concatenção com estrutura
+
+EMPTY X BLANK
+*empty vazio na variavel
+*blank se a string estiver em branco
+
+FUNÇÕES
+*fun nomedafunção(nome:tipo)tiporetorno{}
+*fun nomedafunção(nome:tipo)tiporetorno="$nome$tipo"
+
+FUNÇÕES DE ORDEM SUPERIOR
+*:: 
+exemplo: val x = cal (12,4,::sum) printin=16
+*->
+exemplo: val x = cal (12,4){a,b->a*b} printin=48
+
+FUNÇÃO SINGLE-LINE
+*em uma unica linha
+exemplo fun getfullname(name:string,lastname:string)="namelastname"
+
+FUNÇÕES/EXTENSOES
+*fun tipo.extensao()=
+this[(0..this.length-1).random()].touppercase()
+
+ESTRUTURAS DE CONTROLE
+*if/else,when,elvis operator
+*when { case, else}
+*elvis operator ?: (pergunta e resposta)
+
+ATRIBUIÇÃO
+*o valor atribuido tem que estar na ultima linha do bloco
+
+WHEN
+*aceita valores e condicionais
+*aceita range como case 
+exemplo : when { a>b -> {} A<B->{}}
+
+ELVIS OPERATOR
+*PRECISA DE UMA OPÇÃO VALIDA
+* exemplos:
+var t:int
+var x:int? = 10
+var w:int? = null
+t =x?:w?: -1 //imprime10
+exemplo:
+var t:int
+var x:int? = null
+var w:int? = null
+t =x?:w?: -1 //imprime -1
+exemplo:
+var x:int? = null
+var w:int? = null
+var tString? =x?.algumacoisa() 
+ptrintin(T) NULL
+
+ESTRUTURA DE REPETIÇÃO
+*while(condição){}
+*do{} while (condição)
+*for(i in 0..20 step 2{ printin(i)}
+in= conta do valor inicial ao valor final
+until= conta do valor atual ate o valor estabelecido 
+menos 1
+downto= conta de maneira decrescente
+step= determina o intervalo da contagem
+*letters= usa o tamanho do array e tambem cada posição do array
+exemplo:
+fun letters (){
+val sarray = "ok"
+for(l in sarray)//l seria um tipo de index{
+print(l.touppercase()+" ")}
+/// imprime " o k "
+ou
+fun letters (){
+val sarray = "ok"
+sarray.foreach{l->print(l + " ")}
+// imprime " o k"
